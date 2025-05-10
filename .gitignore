@@ -1,0 +1,26 @@
+# Backend ignores
+backend/HELP.md
+backend/target/
+!backend/.mvn/wrapper/maven-wrapper.jar
+!backend/**/src/main/**/target/
+!backend/**/src/test/**/target/
+!backend/.env
+backend/**/src/main/resources/application.properties
+
+
+# Frontend ignores (nếu dùng React/Vue/Angular)
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/dist/
+
+# IDE & Editor
+.idea/
+*.iml
+*.ipr
+.vscode/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

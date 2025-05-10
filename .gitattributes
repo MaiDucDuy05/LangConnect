@@ -1,0 +1,46 @@
+# Maven Wrapper script (backend)
+mvnw text eol=lf
+mvnw.cmd text eol=crlf
+
+# Batch scripts (Windows)
+*.cmd text eol=crlf
+
+# Shell scripts (Linux/macOS)
+*.sh text eol=lf
+
+# Java files (Spring Boot backend)
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+
+# Node.js files (React/Vue frontend)
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+
+# Binary files (không cần xử lý dòng)
+*.jar binary
+*.class binary
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.mp4 binary
+*.mp3 binary
+*.zip binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+
+# Ignore merge conflicts in package lock files
+package-lock.json merge=union
+yarn.lock merge=union
+pnpm-lock.yaml merge=union
