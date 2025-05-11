@@ -307,7 +307,7 @@ export function SurveyPopup({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-2/3 max-w-3xl p-0 overflow-hidden bg-white rounded-xl">
+      <DialogContent className="sm:w-2/3 w-[95%] max-w-3xl p-0 overflow-hidden bg-white rounded-xl">
         <DialogHeader className="bg-[#16a34a]/10 pb-4 pt-6">
           <DialogTitle className="text-center text-xl text-[#16a34a]">
             {step === "survey" ? "🎯 Chỉ vài giây nữa thôi!" : "Bạn đã hoàn tất đăng ký!"}
@@ -330,10 +330,10 @@ export function SurveyPopup({
 
         {step === "survey" ? (
           <Card className="border-0 shadow-none">
-            <CardContent className="p-6 min-h-[300px] flex flex-col justify-between">
+            <CardContent className="p-4 sm:p-6 min-h-[300px] flex flex-col justify-between">
               <div className="space-y-6">
                 <div className="bg-[#16a34a]/5 p-5 rounded-lg">
-                  <h3 className="font-medium text-[#16a34a] text-lg mb-4">{currentQ.title}</h3>
+                  <h3 className="font-medium text-[#16a34a] text-base sm:text-lg mb-4">{currentQ.title}</h3>
 
                   {currentQ.type === "select" ? (
                     <Select
@@ -356,7 +356,7 @@ export function SurveyPopup({
                       {currentQ.options.map((option) => (
                         <div
                           key={option}
-                          className="flex items-center space-x-2 p-3 rounded-lg hover:bg-[#16a34a]/10 transition-colors"
+                          className="flex items-center space-x-2 p-2 sm:p-3 rounded-lg hover:bg-[#16a34a]/10 transition-colors"
                         >
                           <Checkbox
                             id={`${currentQ.id}-${option}`}
@@ -379,7 +379,7 @@ export function SurveyPopup({
                       {currentQ.options.map((option) => (
                         <div
                           key={option}
-                          className="flex items-center space-x-2 p-3 rounded-lg hover:bg-[#16a34a]/10 transition-colors"
+                          className="flex items-center space-x-2 p-2 sm:p-3 rounded-lg hover:bg-[#16a34a]/10 transition-colors"
                         >
                           <RadioGroupItem
                             value={option}
@@ -396,16 +396,20 @@ export function SurveyPopup({
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="bg-[#16a34a]/5 p-6 flex justify-between">
+            <CardFooter className="bg-[#16a34a]/5 p-4 sm:p-6 flex justify-between">
               <Button
                 variant="outline"
                 onClick={prevQuestion}
                 disabled={currentQuestion === 0}
-                className="border-[#16a34a] text-[#16a34a] hover:bg-[#16a34a]/10"
+                className="border-[#16a34a] text-[#16a34a] hover:bg-[#16a34a]/10 text-xs sm:text-sm px-2 sm:px-4"
               >
                 Quay lại
               </Button>
-              <Button onClick={nextQuestion} disabled={!canProceed()} className="bg-[#16a34a] hover:bg-[#16a34a]/90">
+              <Button
+                onClick={nextQuestion}
+                disabled={!canProceed()}
+                className="bg-[#16a34a] hover:bg-[#16a34a]/90 text-xs sm:text-sm px-2 sm:px-4"
+              >
                 {currentQuestion < questions.length - 1 ? (
                   <span className="flex items-center">
                     Tiếp theo <ChevronRight className="ml-1 h-4 w-4" />
@@ -418,14 +422,14 @@ export function SurveyPopup({
           </Card>
         ) : (
           <Card className="border-0 shadow-none">
-            <CardContent className="pt-8 pb-8 px-6">
+            <CardContent className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 sm:px-6">
               <div className="text-center space-y-5">
                 <div className="flex justify-center">
                   <div className="bg-[#16a34a]/10 p-4 rounded-full">
-                    <CheckCircle className="h-12 w-12 text-[#16a34a]" />
+                    <CheckCircle className="h-8 w-8 sm:h-12 sm:w-12 text-[#16a34a]" />
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold text-[#16a34a]">🎉 Cảm ơn bạn đã đăng ký trải nghiệm!</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-[#16a34a]">🎉 Cảm ơn bạn đã đăng ký trải nghiệm!</h2>
                 <p className="text-gray-600">Chúng tôi sẽ liên hệ trong 1–2 ngày tới nếu bạn thuộc nhóm phù hợp.</p>
                 <div className="pt-3 space-y-3 bg-[#16a34a]/5 p-4 rounded-lg">
                   <p className="font-medium">👉 Theo dõi fanpage để nhận các đợt tư vấn mới nhất!</p>
