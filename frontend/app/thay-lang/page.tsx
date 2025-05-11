@@ -12,57 +12,57 @@ import { Button } from "@/components/ui/button";
 // import { useAuth } from "@/context/AuthContext"
 
 const EmptyStateWithSurvey = ({ position }: { position: "center" | "bottom" }) => {
-    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe8QianXbD8alss08UX_UDnBDKpay44YjlFj3nf9HuhhM8pBA/viewform"
+  const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSe8QianXbD8alss08UX_UDnBDKpay44YjlFj3nf9HuhhM8pBA/viewform";
 
-    const containerStyles =
-      position === "center"
-        ? "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-4xl shadow-2xl animate-fadeIn"
-        : "w-full"
+  const containerStyles =
+    position === "center"
+      ? "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-[95%] max-w-3xl shadow-2xl animate-fadeIn"
+      : "w-full";
 
-    return (
-      <Card className={`${containerStyles} border-dashed border-2 border-green-200 bg-green-50 overflow-hidden`}>
-        <CardContent className="p-8">
-          <div className="flex flex-col items-center text-center">
+  return (
+    <Card className={`${containerStyles} border-dashed border-2 border-green-200 bg-green-50 overflow-hidden`}>
+      <CardContent className="p-4 sm:p-8">
+        <div className="flex flex-col items-center text-center">
+          <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg">
+            Không tìm thấy thầy thuốc phù hợp?
+            <br />
+            Đừng lo! Chúng tôi vẫn đang mở rộng mạng lưới thầy thuốc trên toàn quốc.
+            <br />
+            Hãy chia sẻ nhu cầu – chúng tôi sẽ hỗ trợ và kết nối bạn nhanh chóng.
+          </p>
 
-            <p className="text-gray-600 mb-6 max-w-2xl text-sxl">
-              Không tìm thấy thầy thuốc phù hợp?
-              <br />
-              Đừng lo! Chúng tôi vẫn đang mở rộng mạng lưới thầy thuốc trên toàn quốc mỗi ngày.
-              <br />
-              Hãy chia sẻ nhu cầu hoặc tình trạng sức khỏe của bạn – đội ngũ của chúng tôi sẽ chủ động hỗ trợ và kết nối bạn với thầy lang phù hợp nhất trong thời gian sớm nhất.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 w-full max-w-3xl">
-              <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-                <Clock className="h-10 w-10 text-green-600 mb-2" />
-              
-                <h4 className="font-medium text-gray-800"> Mất 1 phút để được kết nối đúng người</h4>
-                <p className="text-sm text-gray-500">Khảo sát ngắn gọn, dễ trả lời</p>
-              </div>
-
-              <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-                <ClipboardList className="h-10 w-10 text-green-600 mb-2" />
-                <h4 className="font-medium text-gray-800">Trả lời nhanh</h4>
-                <p className="text-sm text-gray-500">Nhận hỗ trợ đúng người</p>
-              </div>
-
-              <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm">
-                <ThumbsUp className="h-10 w-10 text-green-600 mb-2" />
-                <h4 className="font-medium text-gray-800">Cải thiện dịch vụ</h4>
-                <p className="text-sm text-gray-500">Góp phần phát triển cộng đồng</p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 w-full max-w-3xl">
+            <div className="flex flex-col items-center p-3 bg-white rounded-lg shadow-sm">
+              <Clock className="h-8 w-8 text-green-600 mb-2" />
+              <h4 className="font-medium text-gray-800 text-sm sm:text-base">Mất 1 phút</h4>
+              <p className="text-xs text-gray-500">Khảo sát ngắn gọn</p>
             </div>
 
-            <Button
-              className="rounded-full bg-green-600 hover:bg-green-700 text-white px-8 py-6 h-auto text-lg font-medium"
-              onClick={() => window.open(googleFormUrl, "_blank")}
-            >
-              📩 Đăng ký ngay để nhận tư vấn khi có thầy thuốc phù hợp
-            </Button>
+            <div className="flex flex-col items-center p-3 bg-white rounded-lg shadow-sm">
+              <ClipboardList className="h-8 w-8 text-green-600 mb-2" />
+              <h4 className="font-medium text-gray-800 text-sm sm:text-base">Trả lời nhanh</h4>
+              <p className="text-xs text-gray-500">Nhận hỗ trợ đúng người</p>
+            </div>
+
+            <div className="flex flex-col items-center p-3 bg-white rounded-lg shadow-sm">
+              <ThumbsUp className="h-8 w-8 text-green-600 mb-2" />
+              <h4 className="font-medium text-gray-800 text-sm sm:text-base">Cải thiện dịch vụ</h4>
+              <p className="text-xs text-gray-500">Góp phần cộng đồng</p>
+            </div>
           </div>
-        </CardContent>
-      </Card>
-    )
-  }
+
+          <Button
+            className="rounded-full bg-green-600 hover:bg-green-700 text-white px-6 py-4 sm:px-8 sm:py-6 h-auto text-base sm:text-lg font-medium"
+            onClick={() => window.open(googleFormUrl, "_blank")}
+          >
+            📩 Đăng ký để được tư vấn miễn phí
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
 
 
 export default function ThayLangPage() {
