@@ -103,7 +103,8 @@ const practitioners : Practitioner[] = [
 
         specializations: [
             { id: 1, name: " Liệt dây thần kinh số 7", description: null, userIds: [] },
-            { id: 2, name: "Dạ dày", description: null, userIds: [] },
+            { id: 2, name: "Tiêu hoá", description: null, userIds: [] },
+             { id: 3, name: "Thần kinh", description: null, userIds: [] }
         ],
         address: "Làng Sầy - xã Tuấn Đạo - Sơn Động - Bắc Giang",
         phoneNumber: "0355356479",
@@ -227,10 +228,11 @@ const practitioners : Practitioner[] = [
             name: "Hoàng Vương Sỏi",
             specializations: [
                 { id: 1, name: "Ngộ độc", description: null, userIds: [] },
-                { id: 2, name: "Dạ dày", description: null, userIds: [] },
+                { id: 2, name: "Tiêu hoá", description: null, userIds: [] },
                 { id: 3, name: "Vai gáy", description: null, userIds: [] },
                 { id: 4, name: "Vôi hoá", description: null, userIds: [] },
-                { id: 5, name: "Bại Liệt", description: null, userIds: [] }
+                { id: 5, name: "Bại liệt", description: null, userIds: [] },
+                { id: 6, name: "Thần kinh", description: null, userIds: [] }
             ],
             address: "Thanh Hà - Thanh Luận - Sơn Động - Bắc Giang",
             phoneNumber: "0338851415",

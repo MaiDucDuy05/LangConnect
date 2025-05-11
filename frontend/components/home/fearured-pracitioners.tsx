@@ -11,7 +11,7 @@ const FeaturedPractitioners = () => {
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-2xl font-bold">Thầy Lang Nổi Bật</h2>
+          <h2 className="text-2xl font-bold">Thầy Thuốc Đông Y Nổi Bật</h2>
           <Link href="/thay-lang" className="text-green-700 hover:text-green-800 flex items-center">
             Xem tất cả
             <ChevronRight className="ml-1 h-4 w-4" />
@@ -30,7 +30,7 @@ const FeaturedPractitioners = () => {
               </div>
               <CardContent className="p-3">
                 <div className="flex items-center mb-1">
-                  <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full">Top Rated</span>
+                  <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full">Hàng Đầu</span>
                 </div>
                 <h3 className="font-semibold text-sm mb-1">{practitioner.name}</h3>
                 

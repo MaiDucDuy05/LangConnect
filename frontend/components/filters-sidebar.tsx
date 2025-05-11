@@ -8,8 +8,8 @@ import { Clinic, Practitioner } from "@/types";
 
 
 const specialties = [
-  "Châm cứu", "Bấm huyệt", "Xương khớp", "Da liễu", "Tiêu hóa", "Thần kinh", 
-  "Mất ngủ", "Gan mật", "Thảo dược"
+   "Xương khớp", "Da liễu", "Tiêu hóa", "Thần kinh", 
+  "Mất ngủ"
 ];
 
 interface FiltersSidebarProps {
@@ -87,7 +87,7 @@ const FiltersSidebar = ({ data, onFilterChange }: FiltersSidebarProps) => {
         </div>
 
         {/* Location Filter */}
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <h3 className="text-sm font-medium mb-3">Khu Vực</h3>
           <Select value={address} onValueChange={setAddress}>
             <SelectTrigger>
@@ -102,7 +102,7 @@ const FiltersSidebar = ({ data, onFilterChange }: FiltersSidebarProps) => {
               <SelectItem value="Hải Phòng">Hải Phòng</SelectItem>
             </SelectContent>
           </Select>
-        </div>
+        </div> */}
 
         {/* Specialty Filter */}
         <div className="mb-6">
@@ -124,7 +124,7 @@ const FiltersSidebar = ({ data, onFilterChange }: FiltersSidebarProps) => {
         </div>
 
         {/* Consultation Type */}
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <h3 className="text-sm font-medium mb-3">Hình Thức Khám</h3>
           <div className="space-y-2">
             <div className="flex items-center">
@@ -148,10 +148,10 @@ const FiltersSidebar = ({ data, onFilterChange }: FiltersSidebarProps) => {
               </label>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Rating Filter */}
-        <div className="mb-6">
+        {/* <div className="mb-6">
           <h3 className="text-sm font-medium mb-3">Đánh Giá</h3>
           <div className="space-y-2">
             {[5, 4, 3, 2, 1].map((rating) => (
@@ -183,7 +183,7 @@ const FiltersSidebar = ({ data, onFilterChange }: FiltersSidebarProps) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Apply Filters Button */}
         <Button onClick={handleFilterChange} className="w-full bg-green-700 hover:bg-green-800">

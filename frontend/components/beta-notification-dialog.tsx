@@ -76,20 +76,16 @@ export default function BetaNotificationDialog({ open: externalOpen, onOpenChang
         <div className="p-8">
           <DialogHeader>
             <DialogDescription className="text-lg font-medium text-green-700">
-              Chào mừng bạn đến với phiên bản beta của chúng tôi
+               Chào mừng bạn đến với LangConnect – nền tảng tư vấn sức khỏe theo phương pháp Đông y.
             </DialogDescription>
           </DialogHeader>
 
           <div className="py-6 space-y-4">
-            <p className="text-gray-700 text-base leading-relaxed">
-              Cảm ơn bạn đã ghé thăm! Chúng tôi đang xây dựng nền tảng y học cổ truyền toàn diện và bạn là một trong
-              những người đầu tiên được trải nghiệm.
-            </p>
 
             <div className="bg-amber-50 border-l-4 border-amber-400 pl-4 py-3 pr-3 text-amber-700">
               <p className="font-medium mb-1">Lưu ý quan trọng:</p>
               <p>
-                Một số tính năng và dịch vụ đang trong quá trình phát triển và sẽ sớm được ra mắt trong thời gian tới.
+                Chúng tôi hiện đang trong giai đoạn thử nghiệm nhằm hoàn thiện chức năng và nội dung. Một số thông tin có thể chưa đầy đủ và không thay thế cho chẩn đoán y khoa chính thức.
               </p>
             </div>
 
@@ -98,10 +94,19 @@ export default function BetaNotificationDialog({ open: externalOpen, onOpenChang
                 <Sparkles className="h-5 w-5 text-green-600" />
               </div>
               <div>
-                <p className="font-medium text-green-800">Đóng góp ý kiến</p>
+                <p className="font-medium text-green-800">Đăng ký ngay để trải nghiệm dịch vụ!</p>
+            
                 <p className="text-green-700 text-sm mt-1">
-                  Mọi ý kiến đóng góp của bạn đều rất quý giá để chúng tôi có thể cải thiện dịch vụ.
+                  Chúng tôi luôn trân trọng mọi đóng góp và phản hồi từ bạn để cải thiện nền tảng tốt hơn.
                 </p>
+                <p className="text-green-700 text-sm mt-1">
+                Bạn có thể kết nối với chuyên gia Đông y để nhận tư vấn sức khỏe miễn phí cho bản thân hoặc cho gia đình của bạn
+              </p>
+                <p className="text-green-700 text-sm mt-1">
+                Cảm ơn bạn đã ghé thăm! Chúng tôi đang xây dựng nền tảng y học cổ truyền toàn diện và bạn là một trong
+                những người đầu tiên được trải nghiệm.
+              </p>
+          
               </div>
             </div>
           </div>

@@ -21,9 +21,9 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ images }) => {
     return (
         <section className="py-4">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1  gap-4 h-[400px] md:h-[500px] ">
             {/* Main Banner - Takes 2/3 of the width on desktop */}
-            <div className="md:col-span-2 relative overflow-hidden rounded-lg shadow-md">
+            <div className="relative overflow-hidden rounded-lg shadow-md">
               {/* Carousel Container */}
               <div className="relative">
                 {/* Current Slide */}
@@ -31,7 +31,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ images }) => {
                   <img
                     src="/placeholder.svg?height=400&width=800&text=Banner Quảng Cáo Chính"
                     alt="Banner quảng cáo chính"
-                    className="w-full h-[300px] md:h-[400px] object-cover"
+                    className="w-full h-[400px] md:h-[500px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
                     <div className="text-white p-6 md:p-10 max-w-xl">
@@ -84,7 +84,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ images }) => {
             </div>
 
             {/* Side Banners - Takes 1/3 of the width on desktop, stacked */}
-            <div className="flex flex-col gap-4">
+            {/* <div className="flex flex-col gap-4">
               <div className="relative overflow-hidden rounded-lg shadow-md h-[190px] md:h-[195px]">
                 <img
                   src="/placeholder.svg?height=200&width=400&text=Quảng Cáo 1"
@@ -117,7 +117,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ images }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

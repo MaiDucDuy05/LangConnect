@@ -201,7 +201,7 @@ export function Header() {
             </div>
 
             {/* Search Bar */}
-            <div className="flex-1 max-w-3xl relative" ref={searchRef}>
+            <div className="hidden md:block flex-1 max-w-3xl relative " ref={searchRef}>
               <form onSubmit={handleSearchSubmit}>
                 <div className="relative">
                   <input

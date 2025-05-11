@@ -47,7 +47,7 @@ const SearchAndFilter = ({ data, onFilterChange }: SearchAndFilterProps) => {
             />
           </div>
         </div>
-        <div className="flex-1">
+        {/* <div className="flex-1">
           <div className="relative">
             <MapPin className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
             <input
@@ -58,7 +58,7 @@ const SearchAndFilter = ({ data, onFilterChange }: SearchAndFilterProps) => {
               className="w-full pl-10 pr-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600"
             />
           </div>
-        </div>
+        </div> */}
         <div className="flex-none">
           <Button
             onClick={handleFilter}
