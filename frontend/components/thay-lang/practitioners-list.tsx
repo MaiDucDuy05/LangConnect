@@ -100,7 +100,7 @@ const PractitionerList: FC<PractitionerListProps> = ({ practitioners}) => {
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {practitioner.specializations?.map((specialization) => (
-                        <span key={specialization.id} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
+                        <span key={specialization.id} className="bg-amber-200 text-amber-800 text-xs px-2 py-1 rounded-full">
                           {specialization.name}
                         </span>
                       ))}

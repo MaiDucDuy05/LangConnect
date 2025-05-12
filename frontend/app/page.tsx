@@ -13,7 +13,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
       <BetaNotificationDialog />
       {/* Banner Carousel - Similar to Shopee's main banner */}
-     <BannerCarousel images={[]}/>
+     <BannerCarousel images={["images/banner/1.jpg"]}/>
 
       {/* Category Icons - Similar to Shopee's category icons */}
       <CategoryIcon />

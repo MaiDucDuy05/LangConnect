@@ -24,7 +24,7 @@ const FeaturedArticles = () => {
             {
               articles.map((article) => (
                 <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <div className="h-48 bg-gray-200">
+                  <div className="h-49 bg-gray-200">
                     <img
                       src={article.image || "/placeholder.svg"}
                       alt={article.title}
@@ -45,7 +45,7 @@ const FeaturedArticles = () => {
                         <span>{new Date(article.publishDate).toLocaleDateString()}</span>
                       </div>
                       <Button variant="ghost" size="sm" className="text-green-700 hover:text-green-800 p-0">
-                        <Link href={`/blog/${article.id}`}>Đọc tiếp</Link>
+                        <Link href={`/kien-thuc/${article.id}`}>Đọc tiếp</Link>
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Button>
                     </div>

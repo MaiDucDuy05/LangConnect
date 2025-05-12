@@ -70,7 +70,7 @@ export interface HerbalMedicine {
 export interface Service {
   id: string;
   name: string;
-  price: number;
+  price: number | string;
   duration: number; 
   description: string;
 }

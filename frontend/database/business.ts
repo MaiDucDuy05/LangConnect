@@ -24,42 +24,63 @@ const practitioners : Practitioner[] = [
         `,
         degrees: [
             {
-                name: "Chứng nhận hành nghề số 01/2010/SYT-HT do Sở Y tế Hà Tĩnh cấp",
+                name: "Tốt nghiệp Trung cấp Y sĩ Y học cổ truyền Trường trung cấp Y - Dược Bắc Giang ",
                 urlPic: "/placeholder.svg?height=100&width=100&text=Chứng chỉ",
-                awardingBody: "Sở Y tế Hà Tĩnh",
-                dateOfIssue: "2010-01-01",
+                awardingBody: "Trường trung cấp Y - Dược Bắc Giang",
+                dateOfIssue: "2018",
                 isEnable: true
             },
+            {
+                name: "Chứng chỉ hành nghề khám chữa bệnh số 007810/BG CCHN được cấp bởi Sở y tế tỉnh Bắc Giang",
+                urlPic: "/placeholder.svg?height=100&width=100&text=Chứng chỉ",
+                awardingBody:  "Sở y tế tỉnh Bắc Giang",
+                dateOfIssue: "",
+                isEnable: true
+            },
+            {
+                name: "Bằng Y sĩ Y học cổ truyền được cấp bởi Trường trung cấp Y- dược Bắc Giang",
+                urlPic: "/placeholder.svg?height=100&width=100&text=Chứng chỉ",
+                awardingBody:  "Trường trung cấp Y - Dược Bắc Giang",
+                dateOfIssue: "",
+                isEnable: true
+            }
         ],
         services: [
             {
                 id: "1",
                 name: "Xoa bóp",
-                duration: 0,
+                duration: 30,
                 description: "",
-                price: 0
+                price: 0 
             },
             {
                 id: "2",
                 name: "Bấm Huyệt",
-                duration: 0,
+                duration: 30,
                 description: "",
                 price: 0
             },
             {
                 id: "3",
                 name: "Đắp Thuốc",
-                duration: 0,
+                duration: 30,
                 description: "",
                 price: 0
             },
             {
                 id: "4",
                 name: "Bốc Thuốc",
-                duration: 0,
+                duration: 30,
                 description: "",
                 price: 0
             },
+            {
+                id: "5",
+                name: "Tư vấn theo yêu cầu",
+                duration: 30,
+                description: "",
+                price: 0
+            }
         ],
         schedule: [
             {
@@ -103,13 +124,13 @@ const practitioners : Practitioner[] = [
 
         specializations: [
             { id: 1, name: " Liệt dây thần kinh số 7", description: null, userIds: [] },
-            { id: 2, name: "Tiêu hoá", description: null, userIds: [] },
+            { id: 2, name: "Dạ dày", description: null, userIds: [] },
              { id: 3, name: "Thần kinh", description: null, userIds: [] }
         ],
         address: "Làng Sầy - xã Tuấn Đạo - Sơn Động - Bắc Giang",
         phoneNumber: "0355356479",
         email: "",
-        experience: 30,
+        experience: 25,
         profilePic: "/images/thay-lang/2.jpg",
         isVerified: true,
         isOnline: true,
@@ -120,7 +141,15 @@ const practitioners : Practitioner[] = [
             </p>
             <p>Dịch vụ: Điều trị méo miệng, dạ dày</p>
         `,
-        degrees: [],
+        degrees: [
+            {
+                name: "Giấy chứng nhận lương y được cấp bởi Hội Đông y Sơn Động - Bắc Giang",
+                urlPic: "/placeholder.svg?height=100&width=100&text=Chứng chỉ",
+                awardingBody: "Hội Đông y Sơn Động - Bắc Giang",
+                dateOfIssue: "",
+                isEnable: true
+            }
+        ],
         services: [
             {
                 id: "1",
@@ -129,6 +158,13 @@ const practitioners : Practitioner[] = [
                 duration: 40,
                 description: ""
             },
+             {
+                id: "2",
+                name: "Tư vấn theo yêu cầu",
+                duration: 30,
+                description: "",
+                price: 0
+            }
         ],
         schedule: [
             {
@@ -169,11 +205,12 @@ const practitioners : Practitioner[] = [
             address: "Tổ dân phố Mậu, thị trấn Tây Yên Tử, Sơn Động, Bắc Giang",
             phoneNumber: "'0357315303",
             email: "",
-            experience: 20,
+            experience: 30,
             profilePic: "/images/thay-lang/3.jpg",
             isVerified: true,
             isOnline: true,
             description: `
+            <h3>Chủ tịch HTX Du lịch Công đồng người Dao bản Mậu</h3>
             <p>Bà Triệu Thị Hoa, thầy thuốc dân tộc Dao với hơn 30 năm kinh nghiệm thực hành Y học cổ truyền, là thành viên tích cực của Hội Đông y. 
             Bà nổi tiếng với bài thuốc tắm chữa đau nhức xương khớp, xoa bóp tại chỗ đau, hỗ trợ sau sinh (tắm gừng gió, rượu thuốc) và điều trị cảm cúm,
              rối loạn tiêu hóa, sâu răng. Bà còn pha chế các loại cao và dầu xoa để gia tăng hiệu quả điều trị.
@@ -185,16 +222,23 @@ const practitioners : Practitioner[] = [
                     id: "1",
                     name: "Xông tắm",
                     price: 0,
-                    duration: 0,
+                    duration: 30,
                     description: ""
                 },
                 {
                     id: "2",
                     name: "Bốc Thuốc",
                     price: 0,
-                    duration: 0,
+                    duration: 30,
                     description: ""
                 },
+                 {
+                id: "3",
+                name: "Tư vấn theo yêu cầu",
+                duration: 30,
+                description: "",
+                price: 0
+            }
             ],
             schedule: [
                 {
@@ -228,7 +272,7 @@ const practitioners : Practitioner[] = [
             name: "Hoàng Vương Sỏi",
             specializations: [
                 { id: 1, name: "Ngộ độc", description: null, userIds: [] },
-                { id: 2, name: "Tiêu hoá", description: null, userIds: [] },
+                { id: 2, name: "Dạ dày", description: null, userIds: [] },
                 { id: 3, name: "Vai gáy", description: null, userIds: [] },
                 { id: 4, name: "Vôi hoá", description: null, userIds: [] },
                 { id: 5, name: "Bại liệt", description: null, userIds: [] },
@@ -252,23 +296,30 @@ const practitioners : Practitioner[] = [
                     id: "1",
                     name: "Bốc thuốc",
                     price: 0,
-                    duration: 0,
+                    duration: 30,
                     description: ""
                 },
                 {
                     id: "2",
                     name: "Xoa bóp",
                     price: 0,
-                    duration: 0,
+                    duration: 30,
                     description: ""
                 },
                 {
                     id: "3",
                     name: "Bấm huyệt",
                     price: 0,
-                    duration: 0,
+                    duration: 30,
                     description: ""
-                }
+                },
+                 {
+                id: "4",
+                name: "Tư vấn theo yêu cầu",
+                duration: 30,
+                description: "",
+                price: 0
+            }
             ],
             schedule: [
                 {

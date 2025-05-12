@@ -302,7 +302,7 @@ export function SurveyPopup({
         phone,
         notes,
       })
-    }, 5000)
+    }, 15000)
   }
 
   return (

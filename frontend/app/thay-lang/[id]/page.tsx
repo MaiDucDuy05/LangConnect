@@ -22,6 +22,7 @@ export default function PractitionerDetailPage({ params }: { params: { id: strin
   const [practitioner, setPractitioner] = useState<Practitioner | null>(practitionersData)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+;
 
   // useEffect(() => {
   //   async function fetchPractitioner() {
@@ -184,12 +185,14 @@ export default function PractitionerDetailPage({ params }: { params: { id: strin
         {/* Right Column - Tabs */}
         <div className="lg:w-2/3">
           <Tabs defaultValue="about">
-            <TabsList className="w-full">
-              <TabsTrigger value="about">Giới Thiệu</TabsTrigger>
-              <TabsTrigger value="services">Dịch Vụ</TabsTrigger>
-              <TabsTrigger value="remedies">Bài Thuốc</TabsTrigger>
-              <TabsTrigger value="products">Sản Phẩm</TabsTrigger>
-              <TabsTrigger value="reviews">Đánh Giá</TabsTrigger>
+             <TabsList
+                  className="w-full overflow-x-auto whitespace-nowrap flex gap-2 py-1 scrollbar-hide scroll-smooth pl-0 "
+                >
+              <TabsTrigger value="about" className="flex-shrink-0 px-4 py-2 text-sm">Giới Thiệu</TabsTrigger>
+              <TabsTrigger value="services" className="flex-shrink-0 px-4 py-2 text-sm">Dịch Vụ</TabsTrigger>
+              <TabsTrigger value="remedies" className="flex-shrink-0 px-4 py-2 text-sm">Bài Thuốc</TabsTrigger>
+              <TabsTrigger value="products" className="flex-shrink-0 px-4 py-2 text-sm">Sản Phẩm</TabsTrigger>
+              <TabsTrigger value="reviews" className="flex-shrink-0 px-4 py-2 text-sm">Đánh Giá</TabsTrigger>
             </TabsList>
 
             <TabsContent value="about" className="mt-6">
@@ -200,7 +203,7 @@ export default function PractitionerDetailPage({ params }: { params: { id: strin
                 <CardContent>
                   <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: practitioner.description }} />
 
-                  <div className="mt-8">
+                  {/* <div className="mt-8">
                     <h3 className="text-lg font-semibold mb-4">Học Vấn</h3>
                     <div className="space-y-4">
                       {practitioner.degrees.map((degree,index) => (
@@ -217,7 +220,7 @@ export default function PractitionerDetailPage({ params }: { params: { id: strin
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="mt-8">
                     <h3 className="text-lg font-semibold mb-4">Chứng Chỉ</h3>

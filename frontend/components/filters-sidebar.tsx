@@ -9,7 +9,7 @@ import { Clinic, Practitioner } from "@/types";
 
 const specialties = [
    "Xương khớp", "Da liễu", "Tiêu hóa", "Thần kinh", 
-  "Mất ngủ"
+  "Mất ngủ","Dạ dày"
 ];
 
 interface FiltersSidebarProps {

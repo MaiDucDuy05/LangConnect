@@ -256,7 +256,7 @@ export default function AppointmentPage() {
                         <p className="font-medium">{service.name}</p>
                         <div className="flex items-center mt-1">
                           <Clock className="h-4 w-4 text-muted-foreground mr-1" />
-                          <span className="text-sm text-muted-foreground">{service.duration}</span>
+                          <span className="text-sm text-muted-foreground">{service.duration} phút</span>
                         </div>
                       </div>
                       <div className="mt-2 md:mt-0">

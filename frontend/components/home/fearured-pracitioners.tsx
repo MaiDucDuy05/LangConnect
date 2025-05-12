@@ -20,13 +20,16 @@ const FeaturedPractitioners = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {featuredPractitioners.map((practitioner) => (
-            <Card key={practitioner.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <Card  key={practitioner.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="h-40 bg-gray-200">
+                <Link href={`/thay-lang/${practitioner.id}`}>
                 <img
                   src={practitioner.profilePic||"/placeholder.svg?height=160&width=160&text=Thầy Lang"}
                   alt={practitioner.name|| ""}
                   className="w-full h-full object-cover"
                 />
+                </Link>
+               
               </div>
               <CardContent className="p-3">
                 <div className="flex items-center mb-1">
@@ -47,8 +50,8 @@ const FeaturedPractitioners = () => {
                   <span className="text-xs text-gray-500 ml-1">({practitioner.reviews.length} đánh giá) </span>
                 </div>
                 <div className="flex items-center text-xs text-gray-600 mb-2">
-                  <MapPin className="h-3 w-3 mr-1 text-gray-400" />
-                  <span>{practitioner.address.substring(0, 30)} ...</span>
+                  <MapPin className="h-3 w-3 mr-1 text-gray-400 " />
+                  <span className="whitespace-nowrap overflow-hidden text-ellipsis">{practitioner.address.substring(0, 30)} ...</span>
                 </div>
                 <Button size="sm" className="w-full text-xs bg-green-700 hover:bg-green-800">
                   <Link href={`/dat-lich/?idThayLang=${encodeURIComponent(practitioner.id)}`}>Đặt Lịch Tư Vấn</Link>

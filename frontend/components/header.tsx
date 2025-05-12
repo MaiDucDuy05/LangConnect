@@ -2,11 +2,11 @@
 
 import type React from "react"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, X, User, ShoppingCart, Search, XIcon, Trash2, ChevronRight, AlertCircle } from 'lucide-react'
+import { Menu, X, User, ShoppingCart, Search, XIcon, Trash2, ChevronRight, AlertCircle } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { useRouter } from "next/navigation"
 import { useClickAway } from "react-use"
@@ -81,7 +81,7 @@ export function Header() {
   const router = useRouter()
   const [showCartDropdown, setShowCartDropdown] = useState(false)
   const cartRef = useRef(null)
-  const {cartItems, subtotal, cartCount, removeFromCart } = useCart()
+  const { cartItems, subtotal, cartCount, removeFromCart } = useCart()
   const [showBetaDialog, setShowBetaDialog] = useState(false)
 
   // Xử lý click ra ngoài kết quả tìm kiếm
@@ -134,7 +134,6 @@ export function Header() {
     setShowResults(false)
   }
 
-  
   // Xử lý xóa sản phẩm khỏi giỏ hàng
   const handleRemoveFromCart = (e: React.MouseEvent, id: number) => {
     e.stopPropagation()
@@ -174,19 +173,27 @@ export function Header() {
 
       {/* Beta Banner */}
       <div className="bg-amber-50 border-b border-amber-200">
-        <div className="container mx-auto px-4 py-1.5">
-          <div className="flex items-center justify-center">
-            <button 
-              onClick={openBetaDialog}
-              className="flex items-center text-amber-800 text-sm hover:text-amber-900 transition-colors"
-            >
-              <AlertCircle className="h-4 w-4 mr-1.5" />
-              <span className="font-medium">Phiên bản thử nghiệm</span>
-              <Badge className="ml-2 bg-amber-200 text-amber-800 hover:bg-amber-300 text-xs">Beta</Badge>
-            </button>
+          <div className="container mx-auto px-4 py-1.5">
+            <div className="flex items-center justify-center">
+              <button
+                onClick={openBetaDialog}
+                className="flex items-center text-amber-800 text-sm hover:text-amber-900 transition-colors w-full"
+              >
+                <div className="overflow-hidden relative md:overflow-visible w-full flex justify-center">
+                  <div className="md:static whitespace-nowrap md:whitespace-normal text-center flex justify-center w-full">
+                    <br></br>
+                    <span className="font-medium inline-block md:static marquee-text md:animate-none text-center">
+                      LangConnect đang thử nghiệm. Tư vấn sức khỏe mang tính tham khảo, không thay thế khám chữa bệnh chính thức.
+                      <Badge className="ml-2 bg-amber-200 text-amber-800 hover:bg-amber-300 text-xs flex-shrink-0">Beta</Badge>
+                    </span>
+                  </div>
+                </div>
+      
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+
 
       {/* Main Header with Search */}
       <div className="bg-green-600 py-3">
@@ -274,8 +281,8 @@ export function Header() {
               )}
             </div>
 
-             {/* Desktop Right Menu */}
-             <div className="hidden md:flex items-center space-x-4 ml-4">
+            {/* Desktop Right Menu */}
+            <div className="hidden md:flex items-center space-x-4 ml-4">
               <div className="relative" ref={cartRef}>
                 <button
                   className="text-white flex flex-col items-center relative"
@@ -293,7 +300,10 @@ export function Header() {
 
                 {/* Dropdown giỏ hàng */}
                 {showCartDropdown && (
-                  <div   onMouseLeave={() => setShowCartDropdown(false)} className="absolute top-full right-0 mt-1 w-80 bg-white rounded-md shadow-lg z-50 overflow-hidden">
+                  <div
+                    onMouseLeave={() => setShowCartDropdown(false)}
+                    className="absolute top-full right-0 mt-1 w-80 bg-white rounded-md shadow-lg z-50 overflow-hidden"
+                  >
                     <div className="p-3 border-b">
                       <h3 className="font-medium">Giỏ hàng của bạn ({cartCount})</h3>
                     </div>
