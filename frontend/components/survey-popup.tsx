@@ -435,7 +435,7 @@ export function SurveyPopup({
                   <p className="font-medium">👉 Theo dõi fanpage để nhận các đợt tư vấn mới nhất!</p>
                   <p className="font-medium">
                     👉 Tìm hiểu thêm về LangConnect{" "}
-                    <a href="#" className="text-[#16a34a] hover:underline font-semibold">
+                    <a href="https://www.facebook.com/profile.php?id=61575814304088" className="text-[#16a34a] hover:underline font-semibold">
                       tại đây
                     </a>
                     .
