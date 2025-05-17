@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import ClientOnly from "@/components/ui/ClientOnly"
 import { CartProvider } from "@/context/CartContext"
 import { AuthProvider } from "@/context/AuthContext";
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 
 
 const inter = Inter({ subsets: ["latin"] })
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className={inter.className}>
+        <GoogleAnalytics />
         <AuthProvider>
           <CartProvider>
             <ClientOnly>{children}</ClientOnly>

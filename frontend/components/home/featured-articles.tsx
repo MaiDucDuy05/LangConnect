@@ -42,7 +42,7 @@ const FeaturedArticles = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-sm text-gray-500">
                         <Calendar className="h-4 w-4 mr-1" />
-                        <span>{new Date(article.publishDate).toLocaleDateString()}</span>
+                        <span> {new Intl.DateTimeFormat('vi-VN').format(new Date(article.publishDate))}</span>
                       </div>
                       <Button variant="ghost" size="sm" className="text-green-700 hover:text-green-800 p-0">
                         <Link href={`/kien-thuc/${article.id}`}>Đọc tiếp</Link>
