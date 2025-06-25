@@ -1,9 +1,10 @@
 import { Practitioner } from "@/types";
+import { Clinic } from "@/types";
 
 
 const practitioners : Practitioner[] = [
     {
-        id: 1,
+        id: "1",
         name: "Làm Văn Chung",
         specializations: [
             { id: 1, name: "Xương khớp", description: null, userIds: [] },
@@ -119,7 +120,7 @@ const practitioners : Practitioner[] = [
         rating: 4.5
     },
     {
-        id: 2,
+        id: "2",
         name: "Trần Minh Tạ",
 
         specializations: [
@@ -349,6 +350,33 @@ const practitioners : Practitioner[] = [
             rating: 5
         }
 
+];
+
+const clinics: Clinic[] = [
+    {
+        id: 1,
+        name: "Phòng khám Đông y Sơn Động",
+        address: "Cẩm Đàn - Sơn Động - Bắc Giang",
+        phoneNumber: "0386732177",
+        email: "",
+        // practitioners: [1],
+        description: "Phòng khám chuyên điều trị các bệnh xương khớp, phổi và các bệnh lý khác bằng Y học cổ truyền.",
+        profilePic: "/images/clinic/clinic1.jpg",
+        isVerified: true,
+        rating: 4.5
+    },
+    {
+        id: 2,
+        name: "Phòng khám Đông y Tây Yên Tử",
+        address: "Tổ dân phố Mậu, thị trấn Tây Yên Tử, Sơn Động, Bắc Giang",
+        phoneNumber: "'0357315303",
+        email: "",
+        // practitioners: [3],
+        description: "Chuyên điều trị các bệnh xương khớp, tiêu hóa và răng miệng bằng phương pháp Y học cổ truyền.",
+        profilePic: "/images/clinic/clinic2.jpg",
+        isVerified: true,
+        rating: 4.6
+    }
 ];
 
 export function getAllPractitioners() {

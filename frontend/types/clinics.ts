@@ -1,5 +1,5 @@
 export interface Clinic  {
-    id: string;
+    id: number;
     name: string | null;   // name có thể là null
     email: string;
     userRole: string | null;
